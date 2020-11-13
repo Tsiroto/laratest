@@ -46,8 +46,8 @@
           <a class="nav-link" href="/posts">Posts <span class="sr-only"></span></a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <form class="form-inline my-2 my-lg-0" method="GET" action="search">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q">
         <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>

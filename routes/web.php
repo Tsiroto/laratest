@@ -15,9 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home', ['post' => '']);
+    return view('home');
 });
 
 Route::get('/posts', [PostsController::class, 'index']);
 
-Route::get('/newpost', [PostsController::class, 'newpost']);
+Route::any('/newpost', [PostsController::class, 'newpost']);
+
+Route::any('/search', [PostsController::class, 'search']);

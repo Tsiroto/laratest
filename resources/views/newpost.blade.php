@@ -2,9 +2,11 @@
 
 @section('content')
   <div class="container">
-    <h2>Posts!</h2>
-    @foreach ($posts as $post)
-      @include('includes.post')
-    @endforeach
+    <form action="" method="POST">
+      @csrf
+      <input type="text" name="title" placeholder="Title here" class="form-control">
+      <textarea name="body" cols="30" rows="10" placeholder="Your text here" class="form-control"></textarea>
+      <button class="btn btn-primary">Post!</button>
+    </form>
   </div>
 @endsection

@@ -18,12 +18,18 @@ class PostsController extends Controller
             ]);
     }
 
-    public function hello($name) {
-        return "Hello $name";
+    public function newpost(Request $request) {
+        if ($request->method() == 'POST'){
+            echo $request->get('title');
+            echo $request->get('body');
+        };
+        return view('newpost');
     }
 
-    public function newpost() {
-        return view('newpost');
+    public function search(Request $request) {
+        $q = $request->get('q', 'Not Found');
+        if (!$request->filled('q')) $q = 'No Search';
+        return view('search', ['q' => $q]);
     }
 }
 
