@@ -41,10 +41,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto d-flex">
         <li class="nav-item active">
-          <a class="nav-link" href="http://laravue.test/">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="http://laralol.test/">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/posts">Posts <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/newpost">New Post <span class="sr-only"></span></a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0" method="GET" action="search">
@@ -60,7 +63,7 @@
   <footer class="page-footer font-small blue">
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <div class="footer-copyright text-center py-3">{{ date('Y') }} © All Rights Reserved | Theme by 
       <a href="#">Chiroto.com</a>
     </div>
     <!-- Copyright -->

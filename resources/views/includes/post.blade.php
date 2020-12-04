@@ -3,13 +3,13 @@
   <!-- Card content -->
   <div class="card-body">
     <!-- Title -->
-    <h4 class="card-title">Laravel</h4>
+  <h4 class="card-title">{{ $post->title ?? ''}}</h4>
     <!-- Text -->
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae magnam, nihil laudantium consequatur tenetur quas.</p>
+    <p>{{ $post->body ?? ''}}</p>
     <br>
-    <p>The following button does nothing at all.</p>
+    <p>And that's it. We finished programming. Now let's go learn gardening.</p>
     <!-- Button -->
-    <a href="#" class="btn btn-primary">Button</a>
+    <a href="#" class="btn btn-primary">Go gardening</a>
   </div>
 </div>
 <!-- Card -->

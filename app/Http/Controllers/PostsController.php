@@ -3,25 +3,24 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
 
 class PostsController extends Controller
 {
     public function index(){
-        return view('posts', [
-            'posts' => [
-                'This is the first post.',
-                'This is the second post. This is nuts.',
-                'This is the last post.',
-                'Hey, I lied about the last one.',
-                'I really did.'
-                ]
-            ]);
+        $posts = Post::all();
+        return view('posts', ['posts' => $posts]);
     }
 
     public function newpost(Request $request) {
         if ($request->method() == 'POST'){
-            echo $request->get('title');
-            echo $request->get('body');
+            $post = new POST();
+            $post->title = $request->get('title');
+            $post->body = $request->get('body');
+            if ($post->save()){
+                echo "Your post has been published!";
+                return redirect('/posts');
+            };
         };
         return view('newpost');
     }
