@@ -2,9 +2,11 @@
 
 @section('content')
 
-<div class="container">
+<div class="container d-flex flex-column">
   <h2>Home</h2>
-  <h4 class="text-center mb-5">This is a new Laravel test project.<br>For now I am using Bootstrap.</h4>
-  @include('includes.post')
+  <h4 class="text-center mb-5">Laravel test project</h4>
+  
+<a href="{{ route('posts')}}" class="text-center text-dark">Check our Posts!</a>
+
 <div>
 @endsection

@@ -12,6 +12,10 @@ class PostsController extends Controller
         return view('posts', ['posts' => $posts]);
     }
 
+    public function post(Post $post){
+        return view('post', ['post' => $post]);
+    }
+
     public function newpost(Request $request) {
         if ($request->method() == 'POST'){
             $post = new POST();
@@ -27,7 +31,7 @@ class PostsController extends Controller
 
     public function search(Request $request) {
         $q = $request->get('q', 'Not Found');
-        if (!$request->filled('q')) $q = 'No Search';
+        if (!$request->filled('q')) $q = 'Empty Search';
         return view('search', ['q' => $q]);
     }
 }

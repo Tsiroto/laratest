@@ -41,18 +41,18 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto d-flex">
         <li class="nav-item active">
-          <a class="nav-link" href="http://laralol.test/">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="{{ route('home')}}">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/posts">Posts <span class="sr-only"></span></a>
+          <a class="nav-link" href="{{ route('posts')}}">Posts <span class="sr-only"></span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/newpost">New Post <span class="sr-only"></span></a>
+          <a class="nav-link" href="{{ route('newpost')}}">New Post <span class="sr-only"></span></a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0" method="GET" action="search">
+      <form class="form-inline my-2 my-lg-0" method="GET" action="{{ route('search') }}">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q">
-        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
   </nav>
