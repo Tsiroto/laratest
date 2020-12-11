@@ -29,10 +29,29 @@ class PostsController extends Controller
         return view('newpost');
     }
 
+    public function edit_post(Post $post, Request $request){
+        if ($request->method() == 'POST'){
+            $post->title = $request->get('title');
+            $post->body = $request->get('body');
+            if ($post->save()){
+                return redirect('posts', $post);
+            };
+        };
+        return view('edit_post', ['post' => $post]);
+    }
+
     public function search(Request $request) {
         $q = $request->get('q', 'Not Found');
         if (!$request->filled('q')) $q = 'Empty Search';
-        return view('search', ['q' => $q]);
+        else {
+            // $posts = Post::where('title', 'like', '%' .$q .'%')->get();
+            $posts = Post::where('title', 'like', '%' .$q .'%')->orWhere('body', 'like', '%' .$q .'%')->get();
+        }
+        return view('posts', ['posts' => $posts]);
+    }
+
+    public function delete_post(Post $post){
+        $post->delete();
+        return redirect('posts');
     }
 }
-
