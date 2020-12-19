@@ -3,34 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LaraLoL</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      background: burlywood;
-    }
-    h2 {
-      background:brown;
-      color: #fff;
-      padding: 10px 0;
-      text-align: center;
-      margin-bottom: 10%;
-      border-radius: 10px;
-    }
-    .page-footer {
-      position: absolute;
-      bottom: 0;
-      text-align: center;
-    }
-  </style>
+  <title>{{ env('APP_NAME')}}</title>
+  <link rel="stylesheet" href="/css/app.css">
+
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-brown mb-3 ">
@@ -70,5 +45,6 @@
 
   </footer>
   <!-- Footer -->
+  <script src="/js/app.js"></script>
 </body>
 </html>
