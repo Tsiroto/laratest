@@ -8,6 +8,7 @@
 
 </head>
 <body>
+  @include('includes.nav')
   <nav class="navbar navbar-expand-lg navbar-light bg-brown mb-3 ">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -21,9 +22,11 @@
         <li class="nav-item">
           <a class="nav-link" href="{{ route('posts')}}">Posts <span class="sr-only"></span></a>
         </li>
+        @if (Auth::check())
         <li class="nav-item">
           <a class="nav-link" href="{{ route('newpost')}}">New Post <span class="sr-only"></span></a>
         </li>
+        @endif
       </ul>
       <form class="form-inline my-2 my-lg-0" method="GET" action="{{ route('search') }}">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q">

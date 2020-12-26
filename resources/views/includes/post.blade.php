@@ -5,7 +5,6 @@
     </h5>
     <p class="text-secondary">{{ $post->body }}</p>
     <br>
-    <p class="text-info">And that's it. We have finished programming. Now let's go learn gardening.</p>
-    <a href="#" class="btn btn-primary text-center">Go gardening</a>
+    {{-- <p class="text-info">Published by {{ $post->user->name }}.</p> --}}
   </div>
 </div>
